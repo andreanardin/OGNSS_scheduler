@@ -113,18 +113,22 @@ mstData.table2              = T2;
 AA = zeros(size(mstData.meoPdops)); 
 AA(mstData.meoPdops~=0) = 1;
 
-writematrix(mstData.meoPdops, 'results/Pdops.csv');
-writematrix(mstData.revTimes, 'results/revTimes.csv');
-writematrix(AA, 'results/meoAssignations.csv');
+if ~exist('../results', 'dir')
+   mkdir('../results')
+end
 
-writematrix(mstData.longestPaths_id1, 'results/longestPathId1.csv');
-writematrix(mstData.longestPaths_id2, 'results/longestPathId2.csv');
-writematrix(mstData.longestPaths, 'results/longestPaths.csv');
-writematrix(mstData.avgdist, 'results/averageDistances.csv');
+writematrix(mstData.meoPdops, '../results/Pdops.csv');
+writematrix(mstData.revTimes, '../results/revTimes.csv');
+writematrix(AA, '../results/meoAssignations.csv');
+
+writematrix(mstData.longestPaths_id1, '../results/longestPathId1.csv');
+writematrix(mstData.longestPaths_id2, '../results/longestPathId2.csv');
+writematrix(mstData.longestPaths, '../results/longestPaths.csv');
+writematrix(mstData.avgdist, '../results/averageDistances.csv');
 
 % writematrix(mstData.meoTotContactTime,'output/meoTotContactTime.csv');
-writetable(mstData.table1,'results/table1.csv');
-writetable(mstData.table2,'results/table2.csv');
+writetable(mstData.table1,'../results/table1.csv');
+writetable(mstData.table2,'../results/table2.csv');
 
 
 %% Plots
@@ -165,7 +169,7 @@ axis tight, grid on
 legend 'min'
 
 set(gcf, 'Position',  [100, 100, 700, 500])
-saveas(gcf,'results/aggregatedPdop.png')
+saveas(gcf,'../results/aggregatedPdop.png')
 
 
 % figure
