@@ -26,6 +26,7 @@ function dop = computeDOP(H,dopType)
 % navigation solution.
 
 lastwarn(''); % empty lastwarn
+warning('off','MATLAB:singularMatrix');
 
 if nargin < 2
     dopType = 'gdop';
@@ -41,7 +42,6 @@ G = inv((H.'*H));
 % exclude singular matrices from minimum search
 [warnMsg, warnId] = lastwarn;
 if strcmp(warnId,'MATLAB:singularMatrix')
-    warning('off','last');
     g = Inf*eye(size(H,2));
 else
     g = diag(G);   
