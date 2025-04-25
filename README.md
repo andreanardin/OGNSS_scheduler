@@ -28,9 +28,14 @@ Description
 This is a PDOP-driven Scheduler for Optical Inter-Satellite Links enabled GNSS.
 A thorough description of the working principle can be found in:
 
-A. Nardin, J. A. Fraire, F. Dovis, "Contact Plan Design for GNSS Constellations: A Case Study with Optical Inter-Satellite Links", IEEE Transactions on Aerospace and Electronic Systems
+A. Nardin, J. A. Fraire and F. Dovis, "Contact Plan Design for GNSS Constellations: A Case Study With Optical Intersatellite Links," in IEEE Transactions on Aerospace and Electronic Systems, vol. 58, no. 3, pp. 1981-1995, June 2022, doi: 10.1109/TAES.2021.3135025.
 
-Please cite the relative paper if you use this software.
+Cite the paper: 
+[![Cite this using DOI](https://zenodo.org/badge/DOI/10.1109/TAES.2021.3135025.svg)](https://doi.org/10.1109/TAES.2021.3135025) 
+
+Cite the software: 
+[![DOI](https://zenodo.org/badge/438004855.svg)](https://doi.org/10.5281/zenodo.15280924)
+
 
 The scheduler is mainly composed by the following blocks:
 1) Data retrieval from AGI STK access reports
